@@ -1,3 +1,12 @@
+<!-- 
 <p>{{ appointment.id }}</p><br>
 <p>{{ appointment.title }}</p><br>
 <p>{{ appointment.date }}</p><br>
+  -->
+
+<div>
+  <!-- two-way binding, input value will update the variable in the component -->
+  <input [(ngModel)]="newAppointmentTitle" placeholder="Appointment description">   
+  <input [(ngModel)]="newAppointmentDate" type="date" min="{new Date().toISOString().split('T')[0]}" placeholder="Appointment date">
+  <button (click)="addAppointment()">Add appointment</button>
+</div>
